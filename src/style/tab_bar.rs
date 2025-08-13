@@ -30,6 +30,9 @@ pub struct Style {
     /// The border with of the tab labels.
     pub tab_label_border_width: f32,
 
+    /// How soft/hard the corners of the tab labels are
+    pub tab_label_border_radius: Radius,
+
     /// The icon color of the tab labels.
     pub icon_color: Color,
 
@@ -52,6 +55,7 @@ impl Default for Style {
             tab_label_background: Background::Color([0.87, 0.87, 0.87].into()),
             tab_label_border_color: [0.7, 0.7, 0.7].into(),
             tab_label_border_width: 1.0,
+            tab_label_border_radius: 0.0.into(),
             icon_color: Color::BLACK,
             icon_background: Some(Background::Color(Color::TRANSPARENT)),
             icon_border_radius: 4.0.into(),
