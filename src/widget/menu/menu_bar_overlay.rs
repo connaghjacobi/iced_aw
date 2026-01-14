@@ -338,7 +338,7 @@ where
         match re {
             RecEvent::Event => Captured,
             RecEvent::Close | RecEvent::None => {
-                if cursor.is_over(bar_bounds) {
+                if !cursor.is_over(bar_bounds) {
                     Ignored
                 } else {
                     Captured
